@@ -1,68 +1,45 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# ReactJS Weather app
+A simple applicaton that determines the temprature, humidity etc. of any city. 
 
-## Available Scripts
+First, the final product!
+![alt text](https://github.com/aaronalmeida/ReactJS-Weather-App/blob/master/Screencap.PNG)
 
-In the project directory, you can run:
+I'd like to shout out @sentdex on YouTube for an amazing guide that I used to create this.
 
-### `npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technologies used
+- Javasript (ReactJS)
+- CSS
+- Open Weather Map [API](https://openweathermap.org/)
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Data Source
+- Quandl
+- Yahoo Finance
 
-### `npm test`
+## Major Features
+- Backtesting strategy after a train and validation 
+- Comparing return to the market average
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Machine Learning Framework
 
-### `npm run build`
+The code followed the framework for almost all machine learning processes. 
+1. Data Collection: the data was pulled using a scraper that would use regular expressions to strip data from yahoo html files, the amazing Quandl API helped fill in the rest of the data
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Data Preparation: Using the SKLearn library on python, the data was randomized and split int training and evaluation sets. An additional script was used to fill in missing values
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+3. Model: Linear Support Vector Classification
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Train: 0 for underperforming stocks, 1 for outperforming stocks. A simple function call from the SKLearn library 
 
-### `npm run eject`
+5. Evaluate: Compares the return of the stocks chosen to the return of the S&P 500.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+6. Parameter Tuning: More of an artform, test size was manipulated, features were added and removed. Feature weighting was a little hard for my first Machine learning algorithm.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+7. Predict and Test: Used a very basic backtester to measure the return if the algorithm was used. On average the predictions were 56% correct. This may not seem bad but it's unknown. The problem is if you are right 56% of the time, if the losses from the other 44% outweigh the gains made, then the algorithm was unsuccessful. Overall, the algo outperformed the S&P 500 by 9% which is actually pretty good (and probably unrealistic)!
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Future Implementation 
+- Automate data pull to update weekly 
+- Use techincal signals 
+- A more in-depth backtester 
+- Future week prediction 
