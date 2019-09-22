@@ -9,7 +9,7 @@ First, the final product!
 - Javasript (ReactJS)
 
 ## Data Source
-- Open Weather Map [API](https://openweathermap.org/)
+- Open Weather Map's [API](https://openweathermap.org/)
 
 ## Major Features
 - Usage of Open Weather Map's API
