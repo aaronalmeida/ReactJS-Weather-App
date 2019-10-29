@@ -13,7 +13,7 @@ First, the final product!
 
 ## Major Features
 - Usage of Open Weather Map's API
-- Slick CSS stylying 
+- Slick CSS styling 
 
 ## Future Implementation 
 - More specific data about weather conditions 
